@@ -1,0 +1,39 @@
+.balance-container {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-lg);
+  box-shadow: 0 2px 8px var(--color-shadow);
+  transition: all var(--transition-normal);
+  animation: slideIn 0.4s ease;
+}
+
+.balance-title {
+  font-size: var(--text-lg);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.balance-amount {
+  font-size: var(--text-3xl);
+  font-weight: var(--font-bold);
+  transition: color var(--transition-normal);
+}
+
+.balance-container.positive .balance-amount {
+  color: var(--color-success);
+}
+
+.balance-container.negative .balance-amount {
+  color: var(--color-error);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .balance-container {
+    padding: var(--spacing-md);
+  }
+  
+  .balance-amount {
+    font-size: var(--text-2xl);
+  }
+}

@@ -1,0 +1,51 @@
+.summary-container {
+  display: flex;
+  background-color: var(--color-surface);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-lg);
+  box-shadow: 0 2px 8px var(--color-shadow);
+  animation: slideIn 0.4s ease;
+  transition: background-color var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.summary-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.summary-divider {
+  width: 1px;
+  background-color: var(--color-divider);
+  margin: 0 var(--spacing-md);
+}
+
+.summary-title {
+  font-size: var(--text-md);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-xs);
+  font-weight: var(--font-medium);
+}
+
+.summary-amount {
+  font-size: var(--text-xl);
+  font-weight: var(--font-bold);
+  margin: 0;
+}
+
+.income .summary-amount {
+  color: var(--color-income);
+}
+
+.expense .summary-amount {
+  color: var(--color-expense);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .summary-container {
+    padding: var(--spacing-md);
+  }
+}

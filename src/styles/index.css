@@ -1,0 +1,183 @@
+:root {
+  /* Colors - Light Theme */
+  --color-background: #f8f9fa;
+  --color-surface: #ffffff;
+  --color-text-primary: #1c1c1e;
+  --color-text-secondary: #6c757d;
+  --color-border: #e9ecef;
+  --color-divider: #dee2e6;
+  
+  /* Brand Colors */
+  --color-primary: #0A84FF;
+  --color-primary-light: #5AC8FA;
+  --color-primary-dark: #0071E3;
+  
+  /* Semantic Colors */
+  --color-success: #30D158;
+  --color-error: #FF453A;
+  --color-warning: #FF9F0A;
+  --color-info: #64D2FF;
+  
+  /* Transaction Types */
+  --color-income: #30D158;
+  --color-expense: #FF453A;
+  
+  /* UI Elements */
+  --color-button: #0A84FF;
+  --color-button-hover: #0071E3;
+  --color-input-background: #ffffff;
+  --color-input-border: #ced4da;
+  --color-shadow: rgba(0, 0, 0, 0.1);
+  
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+  
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+  --transition-slow: 0.4s ease;
+  
+  /* Font Sizes */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-md: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  
+  /* Font Weights */
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-bold: 700;
+}
+
+/* Dark Theme Colors */
+.dark-mode {
+  --color-background: #1c1c1e;
+  --color-surface: #2c2c2e;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #aeaeb2;
+  --color-border: #3a3a3c;
+  --color-divider: #3a3a3c;
+  
+  --color-primary: #0A84FF;
+  --color-primary-light: #5AC8FA;
+  
+  --color-input-background: #3a3a3c;
+  --color-input-border: #48484a;
+  --color-shadow: rgba(0, 0, 0, 0.3);
+}
+
+/* Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  line-height: 1.5;
+  transition: background-color var(--transition-normal), color var(--transition-normal);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: var(--font-bold);
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: var(--text-3xl);
+}
+
+h2 {
+  font-size: var(--text-2xl);
+}
+
+h3 {
+  font-size: var(--text-xl);
+}
+
+p {
+  margin-bottom: var(--spacing-md);
+}
+
+/* Links */
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-primary-dark);
+}
+
+/* Buttons */
+button {
+  cursor: pointer;
+  font-family: inherit;
+  border: none;
+  background: none;
+}
+
+/* Forms */
+input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive breakpoints */
+/* Mobile first design */
+/* 
+  - Mobile: < 768px
+  - Tablet: 768px - 1023px
+  - Desktop: >= 1024px
+*/
